@@ -1,0 +1,63 @@
+#!/bin/bash
+# Git-Befehle für Upload (falls Sie git installiert haben)
+
+# Repository klonen
+git clone https://github.com/Chrigel71/esxi-backup-pro-releases.git
+cd esxi-backup-pro-releases
+
+# README erstellen
+cat > README.md << 'EOF'
+# 🛡️ ESXI Backup Pro - Windows Releases
+
+Moderne Windows Desktop-Anwendung für ESXi-Backup-Management, basierend auf GhettoVCB.
+
+## 📥 Download
+
+### ⬇️ Aktuelle Version: v1.0.0
+**[Download ESXI Backup Pro Windows App](https://github.com/Chrigel71/esxi-backup-pro-releases/releases/latest)**
+
+- **Dateigröße:** 120 MB
+- **System:** Windows 10/11 (64-bit)
+- **Art:** Portable Anwendung (keine Installation nötig)
+
+## 🎯 Was ist ESXI Backup Pro?
+
+Eine moderne, benutzerfreundliche Desktop-Anwendung für das Management von VMware ESXi-Backups. Entwickelt als Nachfolger für PowerShell-basierte Backup-Scripts.
+
+### ✅ Hauptfunktionen:
+- ESXi Host-Management mit SSH-Verbindungen
+- Automatisierte VM-Backups mit GhettoVCB
+- Real-time Job-Monitoring und Status-Updates
+- E-Mail-Benachrichtigungen mit SMTP-Support
+- Backup-Scheduling mit Cron-ähnlicher Syntax
+- System Tray Integration für Hintergrund-Betrieb
+
+## 🚀 Schnellstart
+
+1. Laden Sie die neueste Version aus den [Releases](https://github.com/Chrigel71/esxi-backup-pro-releases/releases) herunter
+2. Entpacken Sie die ZIP-Datei
+3. Führen Sie `START-ESXI-BACKUP-PRO.bat` aus
+4. ESXi Host konfigurieren und Backup starten
+
+## 📋 System-Anforderungen
+
+- Windows 10/11 (64-bit)
+- 4 GB RAM (empfohlen)
+- 500 MB freier Speicher
+- Netzwerkzugang zu ESXi-Hosts
+
+## 🐛 Support & Issues
+
+Bei Problemen erstellen Sie bitte [Issues](https://github.com/Chrigel71/esxi-backup-pro-releases/issues) in diesem Repository.
+
+---
+
+**Entwickelt für die professionelle ESXi-Backup-Verwaltung** 🚀
+EOF
+
+# Dateien hinzufügen und committen
+git add README.md
+git commit -m "Add README and project description"
+git push origin main
+
+echo "README uploaded! Now create a release on GitHub web interface."
