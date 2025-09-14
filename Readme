@@ -1,0 +1,132 @@
+# 🛡️ ESXI Backup Pro - Windows Releases
+
+Moderne Windows Desktop-Anwendung für ESXi-Backup-Management, basierend auf GhettoVCB.
+
+## 📥 Download
+
+### ⬇️ Aktuelle Version: v1.0.0
+**[Download ESXI Backup Pro Windows App](https://github.com/Chrigel71/esxi-backup-pro-releases/releases/latest)**
+
+- **Dateigröße:** 120 MB
+- **System:** Windows 10/11 (64-bit)
+- **Art:** Portable Anwendung (keine Installation nötig)
+
+## 🎯 Was ist ESXI Backup Pro?
+
+Eine moderne, benutzerfreundliche Desktop-Anwendung für das Management von VMware ESXi-Backups. Entwickelt als Nachfolger für PowerShell-basierte Backup-Scripts mit verbesserter Benutzeroberfläche und erweiterten Funktionen.
+
+### ✅ Hauptfunktionen:
+- **ESXi Host-Management** mit SSH-Verbindungen
+- **Automatisierte VM-Backups** mit GhettoVCB
+- **Real-time Job-Monitoring** und Status-Updates
+- **E-Mail-Benachrichtigungen** mit SMTP-Support
+- **Backup-Scheduling** mit Cron-ähnlicher Syntax
+- **System Tray Integration** für Hintergrund-Betrieb
+
+### 🔧 Unterstützte Features:
+- **Backup-Formate:** thin, zeroedthick, eagerzeroedthick
+- **Snapshot-Optionen:** Memory-Snapshots, Quiescing
+- **Backup-Rotation:** Konfigurierbare Aufbewahrung (1-10 Generationen)
+- **VM-Auswahl:** Individuelle Auswahl pro Backup-Konfiguration
+- **Erweiterte Optionen:** Kompression, Power-Down, feste Verzeichnisse
+
+## 🚀 Schnellstart
+
+### 1. Download & Installation
+1. Laden Sie die neueste Version aus den [Releases](https://github.com/Chrigel71/esxi-backup-pro-releases/releases) herunter
+2. Entpacken Sie die ZIP-Datei an gewünschten Ort
+3. Führen Sie `START-ESXI-BACKUP-PRO.bat` aus oder starten Sie `win-unpacked/electron.exe` direkt
+
+### 2. ESXi Host konfigurieren
+- **IP-Adresse:** IP Ihres ESXi-Servers
+- **Username:** root (Standard)
+- **Passwort:** Ihr ESXi-Root-Passwort
+- **SSH-Port:** 22 (Standard)
+
+### 3. Backup erstellen
+1. Backup-Konfiguration anlegen
+2. GhettoVCB-Pfad konfigurieren: `/opt/ghettovcb/ghettoVCB.sh`
+3. Backup-Volume angeben: `/vmfs/volumes/datastore1/backups`
+4. VMs für Backup auswählen
+5. Backup-Job starten
+
+## 📋 System-Anforderungen
+
+### Minimum:
+- **Betriebssystem:** Windows 10 (64-bit)
+- **RAM:** 4 GB
+- **Speicher:** 500 MB frei
+- **Netzwerk:** Zugang zu ESXi-Hosts (Port 22)
+
+### Empfohlen:
+- **Betriebssystem:** Windows 11 (64-bit)
+- **RAM:** 8 GB oder mehr
+- **SSD-Speicher** für bessere Performance
+- **Stabile Netzwerkverbindung** zu ESXi-Umgebung
+
+## ⚠️ Wichtige Hinweise
+
+### Vor der ersten Nutzung:
+1. **ESXi SSH aktivieren** - Host → Manage → Services → SSH
+2. **Windows Firewall** - Port 22 (SSH) freigeben
+3. **Als Administrator ausführen** - Für SSH-Verbindungen empfohlen
+4. **Windows Defender** - Ausnahme hinzufügen falls nötig
+
+### Sicherheit:
+- Alle Verbindungen über SSH verschlüsselt
+- Keine Speicherung von Credentials auf Festplatte
+- Temporäre Speicherung nur während aktiver Sessions
+
+## 🔧 Unterstützte ESXi-Versionen
+
+- **ESXi 6.x** - Vollständig unterstützt
+- **ESXi 7.x** - Vollständig unterstützt  
+- **ESXi 8.x** - Vollständig unterstützt
+
+## 📖 Dokumentation
+
+### Enthaltene Dateien:
+- `electron.exe` - Hauptanwendung
+- `START-ESXI-BACKUP-PRO.bat` - Einfacher Starter
+- `README-WINDOWS.md` - Detaillierte Benutzeranleitung
+- `win-unpacked/` - Vollständige Anwendung mit Dependencies
+
+### Zusätzliche Hilfe:
+- Detaillierte Anleitung in der heruntergeladenen ZIP-Datei
+- Tooltips und Hilfe-Texte in der Anwendung
+- Issues in diesem Repository für Support-Anfragen
+
+## 🐛 Support & Issues
+
+Bei Problemen oder Fragen:
+1. **[Issues erstellen](https://github.com/Chrigel71/esxi-backup-pro-releases/issues)** in diesem Repository
+2. **Detaillierte Beschreibung** des Problems mit Screenshots
+3. **System-Informationen** und ESXi-Version angeben
+
+### Häufige Probleme:
+- **SSH-Verbindung fehlschlägt** → ESXi SSH-Service prüfen
+- **VMs nicht sichtbar** → Credentials und Netzwerk prüfen
+- **E-Mail-Versand funktioniert nicht** → SMTP-Einstellungen validieren
+
+## 🎉 Changelog
+
+### v1.0.0 (Erste Release)
+- ✅ Vollständige Konvertierung von PowerShell zu Desktop-App
+- ✅ Moderne React-basierte Benutzeroberfläche
+- ✅ Alle ursprünglichen GhettoVCB-Funktionen implementiert
+- ✅ Real-time Job-Monitoring hinzugefügt
+- ✅ System Tray Integration
+- ✅ Verbesserte Fehlerbehandlung und Logging
+
+## 📜 Lizenz
+
+Diese Software basiert auf Open-Source-Komponenten:
+- **GhettoVCB** - VMware Backup-Tool
+- **Electron** - Desktop-App-Framework
+- **React** - UI-Framework
+
+---
+
+**Entwickelt für die professionelle ESXi-Backup-Verwaltung** 🚀
+
+**⭐ Geben Sie diesem Repository einen Stern, wenn es Ihnen hilft!**
